@@ -1,5 +1,4 @@
 FROM python:3.8-alpine
-MAINTAINER Julio Saraiva <contato@juliosaraiva.com.br>
 
 ENV PYTHONUNBUFFERED 1
 COPY ./requirements.txt /requirements.txt
