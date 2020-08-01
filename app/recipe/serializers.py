@@ -28,6 +28,11 @@ class RecipeSerializer(serializers.ModelSerializer):
         queryset=Ingredient.objects.all()
     )
 
+    tags = serializers.PrimaryKeyRelatedField(
+        many=True,
+        queryset=Tag.objects.all()
+    )
+
     class Meta:
         model = Recipe
         fields = ('id', 'title', 'ingredients', 'tags',
