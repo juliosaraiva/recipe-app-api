@@ -1,8 +1,13 @@
 # recipe-app-api
+
+[![Build Status](https://travis-ci.org/juliosaraiva/recipe-app-api.svg?branch=master)](https://travis-ci.org/juliosaraiva/recipe-app-api)
+
 Recipe App Api source code
 
 ### Custom Django User Model
-To custom *Django User Model*, we need to import these three classes: `AbstractUser`, `BaseUserManager` and `PermissionsMixin`.
+
+To custom _Django User Model_, we need to import these three classes: `AbstractUser`, `BaseUserManager` and `PermissionsMixin`.
+
 ```python
 from django.db import models
 from django.contrib.auth.models import (
@@ -50,6 +55,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
 ```
-In this case, we are defining that the username will be the email address, so, we need to set the constant `USERNAME_FIELD` to *email*.
 
-In the file `settings.py`, we will define the constant `AUTH_USER_MODEL` pointing to *'core.User'*
+In this case, we are defining that the username will be the email address, so, we need to set the constant `USERNAME_FIELD` to _email_.
+
+In the file `settings.py`, we will define the constant `AUTH_USER_MODEL` pointing to _'core.User'_
